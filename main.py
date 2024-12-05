@@ -9,25 +9,21 @@ def main():
 
     # Initialize Pygame
     pygame.init()
-
     # Create a screen object
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-    # Define a color (RGB tuple)
-    color = (0, 0, 0)  # Black
-
     #Main game loop
     while True:
-        screen.fill(color, rect=None, special_flags=0)
-        pygame.display.flip()
-
-        # Update the display
-        pygame.display.flip()
-
-        #Quit Pygame
+        #Quit Pygame with "X"
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+    
+        # Update the black display
+        screen.fill("black")
+        pygame.display.flip()
+
+        
 
 if __name__ == "__main__":
     main()
