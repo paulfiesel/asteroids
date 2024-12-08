@@ -13,19 +13,25 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
 
+    # Create a Player object
+    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+
     #Main game loop
     while True:
         #Quit Pygame with "X"
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-    
-        # Update the black display
+
+        # Color, draw, then update the display
         screen.fill("black")
+        player.draw(screen)
         pygame.display.flip()
 
        #Limit the framerate
         dt = clock.tick(60) / 1000
+
+        
 
 if __name__ == "__main__":
     main()
