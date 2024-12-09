@@ -8,9 +8,10 @@ def main():
     # Create a screen object, clock
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
+    dt = 0
+
     # Create a Player object
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    dt = 0
 
     #Main game loop
     while True:
